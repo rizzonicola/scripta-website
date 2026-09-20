@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scripta — Minimal. Fast. Markdown-First.</title>
+<meta name="description" content="Scripta: open-source, local-first Markdown notes for Android, iOS, macOS, Windows and Linux.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2314b8a6'/><path d='M10 22V10h8M10 16h6' stroke='%23181b1f' stroke-width='3' fill='none'/></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="w nav">
+<div class="logo"><svg class="lg" viewBox="90 90 310 310" aria-hidden="true"><g transform="rotate(-45 256 256)"> <path d="M 242,50 L 270,50 C 274,50 277,53 277,57 L 275,130 L 237,130 L 235,57 C 235,53 238,50 242,50 Z" fill="var(--ac)" /> <path d="M 266,60 L 270,60 C 271,60 272,61 272,62 L 270,180 C 270,183 267,185 264,185 C 262,185 261,183 261,180 L 265,62 C 265,61 265.5,60 266,60 Z" fill="#a9b6c4" /> <path d="M 237,130 L 275,130 L 272,290 L 240,290 Z" fill="var(--ac)" /> <rect x="239" y="290" width="34" height="4" fill="#a9b6c4" /> <path d="M 240,294 L 272,294 L 267,370 L 245,370 Z" fill="var(--ac)" opacity="0.9" /> <line x1="243" y1="315" x2="269" y2="315" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <line x1="244" y1="330" x2="268" y2="330" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <line x1="244.5" y1="345" x2="267.5" y2="345" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <path d="M 245,370 L 267,370 L 263,395 L 249,395 Z" fill="#a9b6c4" /> <path d="M 249,395 L 263,395 L 256,442 Z" fill="#a9b6c4" /> <path d="M 249,395 L 256,395 L 256,442 Z" fill="#ffffff" opacity="0.4" /> <circle cx="256" cy="410" r="2.5" fill="#16191d" /> <line x1="256" y1="412.5" x2="256" y2="442" stroke="#16191d" stroke-width="1.5" stroke-linecap="round" /> <circle cx="256" cy="442" r="1.5" fill="#ffffff" /> <path d="M 241,55 L 243,130 L 244,290 L 247,370" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.35" /> <path d="M 271,55 L 269,130 L 268,290 L 265,370" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" opacity="0.4" /> </g></svg>Scripta</div>
+<nav><a href="#features" data-i="nav_f"></a><a href="#/releases" data-i="nav_d"></a><a href="#about" data-i="nav_a"></a></nav>
+<button id="setBtn" aria-label="Settings">⚙ <span data-i="settings"></span></button>
+</div></header>
+
+<main class="w" id="home">
+<div class="hero">
+<h1>Minimal.<br>Fast.<br><em>Markdown-First.</em></h1>
+<p data-i="tag"></p>
+<div class="cta" id="cta"><button class="pri" disabled data-i="loading"></button></div>
+<div class="meta" id="meta"></div>
+</div>
+
+<section id="features"><h2 data-i="feat"></h2><div class="grid" id="fgrid"></div></section>
+
+
+<section id="about"><h2 data-i="lic_h"></h2><p style="color:var(--mu)" data-i="lic_p"></p><div class="card" id="lics"></div></section>
+</main>
+
+<main class="w" id="relpage" hidden>
+<section style="border:0"><a href="#" class="btn" data-i="back"></a>
+<h2 style="margin-top:20px" data-i="dl"></h2><div id="rel"></div></section>
+</main>
+
+<footer><div class="w"><span data-i="foot"></span> · <a href="https://github.com/rizzonicola/Scripta" rel="noopener">GitHub</a> · <a href="#" id="privL" data-i="priv"></a></div></footer>
+
+<dialog id="guide"><button class="x" aria-label="Close" onclick="this.closest('dialog').close()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><div id="gBody"></div></dialog>
+
+<dialog id="set"><button class="x" aria-label="Close" onclick="this.closest('dialog').close()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button><h2 data-i="settings"></h2>
+<p><span data-i="lang"></span><span class="seg" id="langSeg" role="group"><button data-v="it">Italiano</button><button data-v="en">English</button><button data-v="fr">Français</button></span></p>
+<p><span data-i="theme"></span><span class="seg" id="themeSeg" role="group"><button data-v="dark" data-i="th_d"></button><button data-v="light" data-i="th_l"></button><button data-v="contrast" data-i="th_c"></button></span></p>
+<p><span data-i="st_priv"></span></p>
+<label class="o sw"><input type="checkbox" id="optSw" role="switch"><span data-i="ck_opt"></span></label>
+<p><a href="#" id="stRead" data-i="st_read"></a></p></dialog>
+
+<div id="ck" role="dialog" aria-labelledby="ckT" hidden>
+<h2 id="ckT" style="font-size:1.2rem" data-i="ck_t"></h2>
+<p data-i="ck_p1"></p><p data-i="ck_p2"></p><p data-i="ck_p3"></p>
+<div id="prefs" hidden>
+<label class="o"><input type="checkbox" checked disabled><span data-i="ck_nec"></span></label>
+<label class="o"><input type="checkbox" id="optCache"><span data-i="ck_opt"></span></label></div>
+<div class="b"><button class="pri" id="acc" data-i="ck_all"></button><button id="rej" data-i="ck_rej"></button><button id="cus" data-i="ck_cus"></button></div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
