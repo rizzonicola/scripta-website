@@ -1,14 +1,17 @@
 name: Update releases.json
 
 on:
-  # 1) A new Scripta release, sent by the Scripta release workflow once all builds are done
+  # 1) Esecuzione programmata ogni 6 ore
+  schedule:
+    - cron: '0 */6 * * *'
+  # 2) A new Scripta release, sent by the Scripta release workflow once all builds are done
   repository_dispatch:
     types: [scripta-release]
-  # 2) This workflow file itself is edited
+  # 3) This workflow file itself is edited
   push:
     paths:
       - ".github/workflows/update-releases.yml"
-  # 3) Manual run (Actions tab), handy for the very first run
+  # 4) Manual run (Actions tab), handy for the very first run
   workflow_dispatch:
 
 permissions:
