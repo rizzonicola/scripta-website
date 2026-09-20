@@ -21,6 +21,8 @@ Static site: plain HTML, CSS and JavaScript. No build step, no dependencies.
 | `style.css` | Styles and themes |
 | `script.js` | OS detection, releases, translations, settings |
 
+Icons live in `assets/icons/` (SVG favicon, PNG 16-512, Apple touch, maskable), plus `favicon.ico` and `site.webmanifest` in the root.
+
 An all-in-one `index.html` (CSS and JS inlined) is also provided.
 
 ## Deploy
@@ -47,4 +49,3 @@ If you rename assets, update `sf()` and `pick()` in `script.js`.
 
 - The GitHub API allows 60 unauthenticated requests per hour per IP. When it fails, the page falls back to direct download links.
 - Update the privacy text in the banner if your hosting or CDN setup changes.
-
