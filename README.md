@@ -17,13 +17,18 @@ Static site: plain HTML, CSS and JavaScript. No build step, no dependencies.
 
 | File | Purpose |
 |:---|:---|
-| `index.html` | Page markup |
-| `style.css` | Styles and themes |
-| `script.js` | OS detection, releases, translations, settings |
+| `it/index.html`, `en/index.html`, `fr/index.html` | Home page, one static, fully-translated page per language (SEO) |
+| `it/releases/`, `en/releases/`, `fr/releases/` | "All releases" page per language — real URL, no longer `#/releases` |
+| `index.html` (root) | Language gateway: JS redirect based on browser language, `noindex`, canonical → `/it/` |
+| `style.css` | Styles and themes (shared) |
+| `script.js` | OS detection, live release list, install guides, theme/lang switch (shared) |
+| `robots.txt`, `sitemap.xml` | Crawling + indexing, sitemap includes hreflang alternates |
+| `404.html` | Not-found page (multilingual) |
+| `social/og-image.svg` / `.png` | Open Graph / Twitter Card image, 1200×630, flat design |
 
 Icons live in `assets/icons/` (SVG favicon, PNG 16-512, Apple touch, maskable), plus `favicon.ico` and `site.webmanifest` in the root.
 
-An all-in-one `index.html` (CSS and JS inlined) is also provided.
+Static text (nav, hero, features, footer, cookie banner) lives directly in each language's HTML so search engines can read it without executing JavaScript. `script.js` only renders what's inherently dynamic: the personalized download button, the live release list, and the install guides.
 
 ## Deploy
 

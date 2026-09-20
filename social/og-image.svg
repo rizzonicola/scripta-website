@@ -1,0 +1,44 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <title>Scripta — Minimal. Fast. Markdown-First.</title>
+  <!-- Sfondo piatto, nessun gradiente -->
+  <rect width="1200" height="630" fill="#181b1f"/>
+
+  <!-- Blocco accento verde acqua, piatto -->
+  <rect x="0" y="0" width="14" height="630" fill="#2dd4bf"/>
+
+  <!-- Griglia decorativa di puntini, stile "editor" -->
+  <g fill="#2a2f35">
+    <circle cx="1120" cy="80" r="3"/><circle cx="1150" cy="80" r="3"/><circle cx="1180" cy="80" r="3"/>
+    <circle cx="1120" cy="110" r="3"/><circle cx="1150" cy="110" r="3"/><circle cx="1180" cy="110" r="3"/>
+    <circle cx="1120" cy="140" r="3"/><circle cx="1150" cy="140" r="3"/><circle cx="1180" cy="140" r="3"/>
+  </g>
+
+  <!-- Logo (penna stilizzata, ruotata 45°, invariata rispetto al sito) -->
+  <g transform="translate(96,235) scale(1.05)">
+    <g transform="rotate(-45 96 96)">
+      <path d="M 82,-6 L 110,-6 C 114,-6 117,-3 117,1 L 115,74 L 77,74 L 75,1 C 75,-3 78,-6 82,-6 Z" fill="#2dd4bf"/>
+      <path d="M 106,4 L 110,4 C 111,4 112,5 112,6 L 110,124 C 110,127 107,129 104,129 C 102,129 101,127 101,124 L 105,6 C 105,5 105.5,4 106,4 Z" fill="#a9b6c4"/>
+      <path d="M 77,74 L 115,74 L 112,234 L 80,234 Z" fill="#2dd4bf"/>
+      <rect x="79" y="234" width="34" height="4" fill="#a9b6c4"/>
+      <path d="M 80,238 L 112,238 L 107,314 L 85,314 Z" fill="#2dd4bf" opacity="0.9"/>
+      <path d="M 85,314 L 107,314 L 103,339 L 89,339 Z" fill="#a9b6c4"/>
+      <path d="M 89,339 L 103,339 L 96,386 Z" fill="#a9b6c4"/>
+      <path d="M 89,339 L 96,339 L 96,386 Z" fill="#ffffff" opacity="0.4"/>
+      <circle cx="96" cy="354" r="2.5" fill="#16191d"/>
+      <line x1="96" y1="356.5" x2="96" y2="386" stroke="#16191d" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="96" cy="386" r="1.5" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- Testo principale -->
+  <text x="230" y="270" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="800" fill="#eef2f4">Scripta</text>
+  <text x="234" y="330" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" fill="#2dd4bf">Minimal. Fast. Markdown-First.</text>
+  <text x="234" y="380" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#9aa5ad">Open source · Local-first · Android · iOS · macOS · Windows · Linux</text>
+
+  <!-- Badge licenza, piatto -->
+  <rect x="234" y="420" width="150" height="40" rx="8" fill="#22262b" stroke="#2dd4bf" stroke-width="1.5"/>
+  <text x="309" y="446" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#2dd4bf" text-anchor="middle">GPL-3.0</text>
+
+  <rect x="398" y="420" width="150" height="40" rx="8" fill="#22262b" stroke="#3a4147" stroke-width="1.5"/>
+  <text x="473" y="446" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#eef2f4" text-anchor="middle">Open Source</text>
+</svg>

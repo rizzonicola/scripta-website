@@ -56,9 +56,25 @@ jobs:
           echo "::error::Latest release is still incomplete, keeping the previous releases.json"
           exit 1
 
+      - name: Update static SEO snapshot (version/date, per language)
+        run: |
+          TAG=$(jq -r '.[0].tag_name' releases.json)
+          DATE=$(jq -r '.[0].published_at | split("T")[0]' releases.json)
+          for f in it/releases/index.html en/releases/index.html fr/releases/index.html; do
+            sed -i -E "s#(<span id=\"sw-version\">)[^<]*(</span>)#\1${TAG}\2#" "$f"
+            sed -i -E "s#(<span id=\"sw-date\">)[^<]*(</span>)#\1${DATE}\2#" "$f"
+          done
+          # softwareVersion nel JSON-LD SoftwareApplication (home page, 3 lingue)
+          for f in it/index.html en/index.html fr/index.html it/releases/index.html en/releases/index.html fr/releases/index.html; do
+            if grep -q '"softwareVersion"' "$f"; then
+              sed -i -E "s#\"softwareVersion\": ?\"[^\"]*\"#\"softwareVersion\": \"${TAG}\"#" "$f"
+            fi
+          done
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add releases.json
-          git diff --cached --quiet || (git commit -m "chore: update releases.json" && git push)
+          git add releases.json it/releases/index.html en/releases/index.html fr/releases/index.html \
+                   it/index.html en/index.html fr/index.html
+          git diff --cached --quiet || (git commit -m "chore: update releases.json and version snapshot" && git push)
