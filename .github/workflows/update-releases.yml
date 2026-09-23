@@ -78,3 +78,5 @@ jobs:
           git add releases.json it/releases/index.html en/releases/index.html fr/releases/index.html \
                    it/index.html en/index.html fr/index.html
           git diff --cached --quiet || (git commit -m "chore: update releases.json and version snapshot" && git push)
+
+# 1
