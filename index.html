@@ -15,15 +15,15 @@
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#181b1f">
-<meta name="robots" content="noindex, follow">
+<meta name="robots" content="index, follow">
 <link rel="stylesheet" href="/style.css">
 <script>
 (function(){
   try {
     var stored = localStorage.getItem('sc_lang');
-    var nav = (navigator.language||'it').slice(0,2);
-    var target = stored || (['it','en','fr'].indexOf(nav)>-1 ? nav : 'it');
-    if (target !== 'it') location.replace('/' + target + '/' + location.hash);
+    // Redirect only if the visitor explicitly chose a language before.
+    // No navigator.language redirect: Googlebot (en-US) would be sent to /en/.
+    if (stored && ['en','fr'].indexOf(stored)>-1) location.replace('/' + stored + '/' + location.hash);
   } catch(e) {}
 })();
 </script>
