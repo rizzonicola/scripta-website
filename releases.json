@@ -2,67 +2,67 @@
   {
     "tag_name": "v0.9.9",
     "name": "v0.9.9",
-    "published_at": "2026-10-13T10:57:07Z",
+    "published_at": "2026-10-17T14:21:40Z",
     "html_url": "https://github.com/rizzonicola/Scripta/releases/tag/v0.9.9",
     "assets": [
       {
         "name": "Scripta-arm64-v8a.apk",
-        "size": 24010035,
-        "digest": "sha256:7183b18ad4b14bafceda76a59c225fc40a88da2ade486bdc4b24e5d726e9788a",
+        "size": 24434988,
+        "digest": "sha256:7d07d4966ede4c7cbe59ed6fd2285a434405a2fd43488d83a16de8dfbb002fed",
         "browser_download_url": "https://github.com/rizzonicola/Scripta/releases/download/v0.9.9/Scripta-arm64-v8a.apk"
       },
       {
         "name": "Scripta-armeabi-v7a.apk",
-        "size": 21992571,
-        "digest": "sha256:5ab24c80d8c7b39c5ec99c5bc1922fdad99f5d14f75e55eb67f624faa7aacd07",
+        "size": 22306726,
+        "digest": "sha256:0393ce0666cd59886ed4ad24ca0121e8b4ba805016cd73a6026cb6456dfa14f9",
         "browser_download_url": "https://github.com/rizzonicola/Scripta/releases/download/v0.9.9/Scripta-armeabi-v7a.apk"
       },
       {
         "name": "Scripta-ios-unsigned.ipa",
-        "size": 10478278,
-        "digest": "sha256:e1f115af07f7befbc3fd696d4526c404cd215b26395f42fe10c9e6194f0f2c46",
+        "size": 10532343,
+        "digest": "sha256:f6f44f7a5bde93b40046976af500ab0372944f39aa38afc42ab6524a49289e93",
         "browser_download_url": "https://github.com/rizzonicola/Scripta/releases/download/v0.9.9/Scripta-ios-unsigned.ipa"
       },
       {
         "name": "Scripta-macos-universal.dmg",
-        "size": 27298699,
-        "digest": "sha256:689448bab0f586b2515e93351681d4eaa3d34e79ce50b8694527f8120b7aac8e",
+        "size": 27409824,
+        "digest": "sha256:4cad3a23c4f034f61d7ca1e58736e3d96312a838400fa5925c57e10694252400",
         "browser_download_url": "https://github.com/rizzonicola/Scripta/releases/download/v0.9.9/Scripta-macos-universal.dmg"
       },
       {
         "name": "Scripta-macos-universal.zip",
-        "size": 24014966,
-        "digest": "sha256:f1c35e5c6c6c984a3a7f5f546a7a103ec41bc257cd1c78b024712166d372c073",
+        "size": 24121795,
+        "digest": "sha256:066b38cdf65d7f981840f11f01b9d66d71ead58b9151fc5d51aa3e062f0f5f9f",
         "browser_download_url": "https://github.com/rizzonicola/Scripta/releases/download/v0.9.9/Scripta-macos-universal.zip"
       },
       {
         "name": "Scripta-universal.apk",
-        "size": 68552297,
-        "digest": "sha256:f801faaca69b89c089721fab6f268609821750de14ee87ff548d1db6ef0b4779",
+        "size": 69633467,
+        "digest": "sha256:e1ffb53b3c3cef55953a795d6259f401ba9be00df2f2efae39775525ae491fa3",
         "browser_download_url": "https://github.com/rizzonicola/Scripta/releases/download/v0.9.9/Scripta-universal.apk"
       },
       {
         "name": "Scripta-windows-arm64-setup.exe",
-        "size": 12757642,
-        "digest": "sha256:1e1119fa03a90509dfa5e8cb1fa8fcf8d43dc26e7eb367c51991736ec3c298e3",
+        "size": 12777500,
+        "digest": "sha256:2f36b324d1402dfda7dda4ae3d3cb39e458502d1089947fcb2e8a57f4ab3a562",
         "browser_download_url": "https://github.com/rizzonicola/Scripta/releases/download/v0.9.9/Scripta-windows-arm64-setup.exe"
       },
       {
         "name": "Scripta-windows-x64-setup.exe",
-        "size": 13391808,
-        "digest": "sha256:3d0d82ee7d18c3feb7a8937f925c4adbad4f3892951dfc070198553faae7534a",
+        "size": 13419232,
+        "digest": "sha256:c2b29b6c9943f213445a473f0cb31347234ca78b4606f0416c83fc33f34a3474",
         "browser_download_url": "https://github.com/rizzonicola/Scripta/releases/download/v0.9.9/Scripta-windows-x64-setup.exe"
       },
       {
         "name": "Scripta-x86_64.apk",
-        "size": 25543687,
-        "digest": "sha256:d38d15c2b6305bdfe51a4b76c30e078015d3ef46d2fb23550c19c480ef71287a",
+        "size": 25887429,
+        "digest": "sha256:feb17cf84b05265a570673dd1ecd7340d33b301dcf8b8f286598e7e2ab143085",
         "browser_download_url": "https://github.com/rizzonicola/Scripta/releases/download/v0.9.9/Scripta-x86_64.apk"
       },
       {
         "name": "Scripta.flatpak",
-        "size": 9662816,
-        "digest": "sha256:a75321d4fc61309a399492e586193591c6fd85c69ac0d8eb55fee0607f391a44",
+        "size": 9694384,
+        "digest": "sha256:56aa3252ed2bf85674c75ace1dc0ec80d4207fc0da1624f7403069b095b2e443",
         "browser_download_url": "https://github.com/rizzonicola/Scripta/releases/download/v0.9.9/Scripta.flatpak"
       }
     ]
