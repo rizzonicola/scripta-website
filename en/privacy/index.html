@@ -17,13 +17,16 @@
 <meta name="theme-color" content="#181b1f">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="/style.css">
-<script>try{var t=localStorage.getItem('sc_theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{var t=localStorage.getItem('sc_theme');if(t==='system')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body data-page="privacy" data-lang="en">
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="w nav">
 <a class="logo" href="/en/" aria-label="Scripta — home"><svg class="lg" viewBox="90 90 310 310" aria-hidden="true"><g transform="rotate(-45 256 256)"> <path d="M 242,50 L 270,50 C 274,50 277,53 277,57 L 275,130 L 237,130 L 235,57 C 235,53 238,50 242,50 Z" fill="var(--ac)" /> <path d="M 266,60 L 270,60 C 271,60 272,61 272,62 L 270,180 C 270,183 267,185 264,185 C 262,185 261,183 261,180 L 265,62 C 265,61 265.5,60 266,60 Z" fill="#a9b6c4" /> <path d="M 237,130 L 275,130 L 272,290 L 240,290 Z" fill="var(--ac)" /> <rect x="239" y="290" width="34" height="4" fill="#a9b6c4" /> <path d="M 240,294 L 272,294 L 267,370 L 245,370 Z" fill="var(--ac)" opacity="0.9" /> <line x1="243" y1="315" x2="269" y2="315" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <line x1="244" y1="330" x2="268" y2="330" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <line x1="244.5" y1="345" x2="267.5" y2="345" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <path d="M 245,370 L 267,370 L 263,395 L 249,395 Z" fill="#a9b6c4" /> <path d="M 249,395 L 263,395 L 256,442 Z" fill="#a9b6c4" /> <path d="M 249,395 L 256,395 L 256,442 Z" fill="#ffffff" opacity="0.4" /> <circle cx="256" cy="410" r="2.5" fill="#16191d" /> <line x1="256" y1="412.5" x2="256" y2="442" stroke="#16191d" stroke-width="1.5" stroke-linecap="round" /> <circle cx="256" cy="442" r="1.5" fill="#ffffff" /> <path d="M 241,55 L 243,130 L 244,290 L 247,370" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.35" /> <path d="M 271,55 L 269,130 L 268,290 L 265,370" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" opacity="0.4" /> </g></svg>Scripta</a>
+<button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg><span>Menu</span></button>
+<div class="nav-menu" id="navMenu">
 <nav><a href="/en/">Home</a><a href="/en/releases/">Download</a><a href="https://app.scripta.poppi.cc/" rel="noopener">Web App</a><a href="/en/#about">Licenses</a></nav>
+</div>
 </div></header>
 
 <main class="w legal" id="main">
@@ -37,7 +40,7 @@
 
 <h2>2. What data we process</h2>
 <h3>2.1 Browsing and security data</h3>
-<p>The site is delivered through Cloudflare. Like any CDN, Cloudflare may process technical data needed to serve pages and protect the service: IP address, User-Agent, requested URL, date and time, response code and security information. We do not use this data to profile visitors.</p>
+<p>The site is a static site delivered through <strong>Cloudflare Pages</strong>. Like any CDN, Cloudflare processes the technical data needed to serve pages and protect the service: IP address, User-Agent, requested URL, date and time, response code and security information. Cloudflare acts as our hosting provider and data processor; it does not provide us with a list of visitors, and we do not keep named logs. We therefore cannot identify an individual from browsing data, and we do not use it for profiling.</p>
 <p>We do not use analytics, advertising pixels, social plugins or profiling. We do not sell personal data.</p>
 
 <h3>2.2 Website local storage</h3>
@@ -45,8 +48,8 @@
 <div class="table-wrap"><table>
 <thead><tr><th>Key</th><th>Purpose</th><th>Type</th><th>Duration</th></tr></thead>
 <tbody>
-<tr><td data-label="Key"><code>sc_lang</code></td><td data-label="Purpose">Selected language</td><td data-label="Type">Necessary</td><td data-label="Duration">Until cleared</td></tr>
-<tr><td data-label="Key"><code>sc_theme</code></td><td data-label="Purpose">Dark, light or high-contrast theme</td><td data-label="Type">Necessary</td><td data-label="Duration">Until cleared</td></tr>
+<tr><td data-label="Key"><code>sc_lang</code></td><td data-label="Purpose">Selected or automatic language</td><td data-label="Type">Necessary</td><td data-label="Duration">Until cleared</td></tr>
+<tr><td data-label="Key"><code>sc_theme</code></td><td data-label="Purpose">Dark, light, high-contrast or system theme</td><td data-label="Type">Necessary</td><td data-label="Duration">Until cleared</td></tr>
 <tr><td data-label="Key"><code>sc_consent</code></td><td data-label="Purpose">Remembers your choice in the banner</td><td data-label="Type">Necessary</td><td data-label="Duration">Until cleared</td></tr>
 <tr><td data-label="Key"><code>sc_opt</code></td><td data-label="Purpose">Optional cache preference</td><td data-label="Type">Necessary</td><td data-label="Duration">Until cleared</td></tr>
 <tr><td data-label="Key"><code>sc_cache</code></td><td data-label="Purpose">Release information cache</td><td data-label="Type">Optional, consent only</td><td data-label="Duration">1 hour</td></tr>
@@ -80,17 +83,18 @@
 <p>We do not share data with advertisers, data brokers or other third parties for marketing purposes.</p>
 
 <h2>5. Retention</h2>
-<p>Technical and security logs are retained by Cloudflare according to the service configuration and for the time needed to ensure security and continuity. Local storage remains in your browser until you clear it. Emails are kept for as long as needed to handle the request and then deleted, unless the law requires otherwise.</p>
+<p>We do not keep logs of our own. Technical and security logs are handled by Cloudflare under the service configuration and its policies, for the time needed to ensure security and continuity; they are not provided to us in a form that identifies individual visitors. Local storage remains in your browser until you clear it. Emails are kept for as long as needed to handle the request and then deleted, unless the law requires otherwise.</p>
 
 <h2>6. Your rights</h2>
 <p>You can exercise the rights under Arts. 15–22 GDPR: access, rectification, erasure, restriction, objection, portability and withdrawal of consent. Write to <a href="mailto:info@poppi.cc">info@poppi.cc</a>; we will reply within the time limits set by law.</p>
+<p><strong>What this means in practice.</strong> We have no accounts, user database or server-side archive linked to visitors. Website and web-app data stays on your device: you can delete it yourself in your browser settings (“Clear site data”) or in the app. If you write to us, we will explain how. For technical logs handled by Cloudflare, which do not allow us to identify you, we can explain the processing and, if needed, contact the provider; we cannot erase data we cannot link to you. We delete emails once your request has been handled.</p>
 <p>If you believe the processing infringes the GDPR, you can lodge a complaint with the <a href="https://www.garanteprivacy.it/" rel="noopener">Italian Data Protection Authority</a> or with the supervisory authority in your country.</p>
 
 <h2>7. Cookies</h2>
 <p>This site does not use profiling cookies. Cloudflare may set technical security cookies (for example <code>__cf_bm</code>) when bot protection features are active; they are necessary for the security of the service and do not require consent. The banner you see collects consent for the optional release cache and informs you about local storage.</p>
 
 <h2>8. Minors</h2>
-<p>The site and web app are not intended for children under 14. We do not knowingly collect data from minors. If you believe a minor has sent us data, contact us and we will delete it.</p>
+<p>The site and web app are not intended for children under 14. We do not knowingly collect data from minors. If you believe a minor has sent us data by email, contact us and we will delete the message.</p>
 
 <h2>9. Licenses</h2>
 <p>The code of this website is released under the <a href="/LICENSE">MIT</a> license. The Scripta app is released under <a href="https://github.com/rizzonicola/Scripta/blob/main/LICENSE" rel="noopener">GPL-3.0</a>. Third-party libraries keep their respective licenses.</p>
@@ -102,5 +106,6 @@
 </main>
 
 <footer><div class="w footer-links"><span>© 2026 Nicola Rizzo · <a href="/LICENSE">Site MIT</a> · <a href="https://github.com/rizzonicola/Scripta/blob/main/LICENSE" rel="noopener">App GPL-3.0</a></span><span><a href="mailto:info@poppi.cc">info@poppi.cc</a> · <a href="https://github.com/rizzonicola/Scripta" rel="noopener">GitHub</a> · <a href="/en/privacy/" aria-current="page">Privacy & cookies</a></span><span class="lang-links"><a href="/it/privacy/">Italiano</a> · <a href="/en/privacy/" aria-current="page">English</a> · <a href="/fr/privacy/">Français</a></span></div></footer>
+<script src="/menu.js" defer></script>
 </body>
 </html>

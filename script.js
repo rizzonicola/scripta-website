@@ -55,13 +55,16 @@ async function load(){const c=ls.get('sc_cache'),ok=ls.get('sc_opt')==='1';
 $('#setBtn').onclick=()=>{$('#optSw').checked=ls.get('sc_opt')==='1';$('#set').showModal()};
 $('#optSw').onchange=e=>{ls.set('sc_opt',e.target.checked?'1':'0');if(!e.target.checked)try{localStorage.removeItem('sc_cache')}catch(_){}};
 function pressed(id,v){document.querySelectorAll(id+' button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===v))}
-/* Il cambio lingua ora naviga verso /<lang>/ o /<lang>/releases/: un URL
-   statico per lingua, indicizzabile e con hreflang corretto, invece di
-   riscrivere il testo via JS in un unico URL. */
-$('#langSeg').onclick=e=>{const v=e.target.dataset.v;if(!v||v===lang)return;ls.set('sc_lang',v);
- const p=e.target.closest('[data-page]').dataset.page;location.href='/'+v+(p==='releases'?'/releases/':'/')};
-$('#themeSeg').onclick=e=>{const v=e.target.dataset.v;if(v){document.documentElement.dataset.theme=v;ls.set('sc_theme',v);pressed('#themeSeg',v)}};
-const th=ls.get('sc_theme')||'dark';document.documentElement.dataset.theme=th;pressed('#themeSeg',th);
+/* La lingua "Sistema" segue le preferenze del browser; le altre scelte
+   restano URL statici per lingua, indicizzabili e con hreflang corretto. */
+function sysLang(){const list=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'it'];for(const x of list){const c=String(x).toLowerCase();if(c.startsWith('it'))return 'it';if(c.startsWith('en'))return 'en';if(c.startsWith('fr'))return 'fr'}return 'it'}
+const storedLang=ls.get('sc_lang');pressed('#langSeg',storedLang==='system'&&sysLang()===lang?'system':lang);
+$('#langSeg').onclick=e=>{const v=e.target.dataset.v;if(!v)return;const p=e.target.closest('[data-page]').dataset.page;const target=v==='system'?sysLang():v;ls.set('sc_lang',v);if(target===lang){pressed('#langSeg',v);return}location.href='/'+target+(p==='releases'?'/releases/':'/')};
+const darkMq=matchMedia('(prefers-color-scheme: dark)');
+function applyTheme(v){document.documentElement.dataset.theme=v==='system'?(darkMq.matches?'dark':'light'):v;pressed('#themeSeg',v)}
+$('#themeSeg').onclick=e=>{const v=e.target.dataset.v;if(v){ls.set('sc_theme',v);applyTheme(v)}};
+applyTheme(ls.get('sc_theme')||'dark');
+darkMq.addEventListener('change',()=>{if(ls.get('sc_theme')==='system')applyTheme('system')});
 const ck=$('#ck');function done(opt){ls.set('sc_consent','1');ls.set('sc_opt',opt?'1':'0');if(!opt)try{localStorage.removeItem('sc_cache')}catch(e){}ck.hidden=true}
 $('#acc').onclick=()=>done(true);$('#rej').onclick=()=>done(false);
 $('#cus').onclick=()=>{const p=$('#prefs');if(p.hidden){p.hidden=false;$('#optCache').checked=ls.get('sc_opt')==='1';$('#cus').textContent='OK'}else done($('#optCache').checked)};

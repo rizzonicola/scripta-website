@@ -10,7 +10,7 @@ Static site: plain HTML, CSS and JavaScript. No build step, no dependencies.
 - Reads the latest release from the GitHub API, with direct `releases/latest/download/` links as fallback
 - Install guides for iOS (sideloading), Linux (Flatpak), Android, Windows and macOS
 - All files with size and SHA-256, plus previous releases
-- Italian, English and French, with dark, light and high-contrast themes
+- Italian, English and French, with dark, light, high-contrast or system themes; language can follow the browser
 - Link to the installable Web/PWA app at [app.scripta.poppi.cc](https://app.scripta.poppi.cc/)
 - GDPR cookie banner and dedicated privacy notices (IT/EN/FR)
 - Clear licensing: website MIT, Scripta app GPL-3.0
@@ -22,9 +22,10 @@ Static site: plain HTML, CSS and JavaScript. No build step, no dependencies.
 | `it/index.html`, `en/index.html`, `fr/index.html` | Home page, one static, fully-translated page per language (SEO) |
 | `it/releases/`, `en/releases/`, `fr/releases/` | "All releases" page per language — real URL, no longer `#/releases` |
 | `it/privacy/`, `en/privacy/`, `fr/privacy/` | Privacy notices per language: controller, storage, recipients, rights |
-| `index.html` (root) | Language gateway: JS redirect based on browser language, `noindex`, canonical → `/it/` |
+| `index.html` (root) | Language gateway: follows the browser language on first visit, then the saved choice; canonical → `/it/` |
 | `style.css` | Styles and themes (shared) |
 | `script.js` | OS detection, live release list, install guides, theme/lang switch (shared) |
+| `menu.js` | Mobile navigation menu (shared) |
 | `_headers` | Content types and cache headers for Cloudflare Pages |
 | `LICENSE` | MIT license for this website (the Scripta app is GPL-3.0) |
 | `robots.txt`, `sitemap.xml` | Crawling + indexing, sitemap includes hreflang alternates |

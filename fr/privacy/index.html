@@ -17,13 +17,16 @@
 <meta name="theme-color" content="#181b1f">
 <meta name="robots" content="index, follow">
 <link rel="stylesheet" href="/style.css">
-<script>try{var t=localStorage.getItem('sc_theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{var t=localStorage.getItem('sc_theme');if(t==='system')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body data-page="privacy" data-lang="fr">
 <a class="skip" href="#main">Aller au contenu</a>
 <header><div class="w nav">
 <a class="logo" href="/fr/" aria-label="Scripta — home"><svg class="lg" viewBox="90 90 310 310" aria-hidden="true"><g transform="rotate(-45 256 256)"> <path d="M 242,50 L 270,50 C 274,50 277,53 277,57 L 275,130 L 237,130 L 235,57 C 235,53 238,50 242,50 Z" fill="var(--ac)" /> <path d="M 266,60 L 270,60 C 271,60 272,61 272,62 L 270,180 C 270,183 267,185 264,185 C 262,185 261,183 261,180 L 265,62 C 265,61 265.5,60 266,60 Z" fill="#a9b6c4" /> <path d="M 237,130 L 275,130 L 272,290 L 240,290 Z" fill="var(--ac)" /> <rect x="239" y="290" width="34" height="4" fill="#a9b6c4" /> <path d="M 240,294 L 272,294 L 267,370 L 245,370 Z" fill="var(--ac)" opacity="0.9" /> <line x1="243" y1="315" x2="269" y2="315" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <line x1="244" y1="330" x2="268" y2="330" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <line x1="244.5" y1="345" x2="267.5" y2="345" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <path d="M 245,370 L 267,370 L 263,395 L 249,395 Z" fill="#a9b6c4" /> <path d="M 249,395 L 263,395 L 256,442 Z" fill="#a9b6c4" /> <path d="M 249,395 L 256,395 L 256,442 Z" fill="#ffffff" opacity="0.4" /> <circle cx="256" cy="410" r="2.5" fill="#16191d" /> <line x1="256" y1="412.5" x2="256" y2="442" stroke="#16191d" stroke-width="1.5" stroke-linecap="round" /> <circle cx="256" cy="442" r="1.5" fill="#ffffff" /> <path d="M 241,55 L 243,130 L 244,290 L 247,370" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.35" /> <path d="M 271,55 L 269,130 L 268,290 L 265,370" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" opacity="0.4" /> </g></svg>Scripta</a>
+<button class="menuBtn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg><span>Menu</span></button>
+<div class="nav-menu" id="navMenu">
 <nav><a href="/fr/">Accueil</a><a href="/fr/releases/">Télécharger</a><a href="https://app.scripta.poppi.cc/" rel="noopener">Web App</a><a href="/fr/#about">Licences</a></nav>
+</div>
 </div></header>
 
 <main class="w legal" id="main">
@@ -37,7 +40,7 @@
 
 <h2>2. Quelles données nous traitons</h2>
 <h3>2.1 Données de navigation et de sécurité</h3>
-<p>Le site est distribué via Cloudflare. Comme tout CDN, Cloudflare peut traiter les données techniques nécessaires à la livraison des pages et à la protection du service : adresse IP, User-Agent, URL demandée, date et heure, code de réponse et informations de sécurité. Nous n'utilisons pas ces données pour profiler les visiteurs.</p>
+<p>Le site est un site statique distribué via <strong>Cloudflare Pages</strong>. Comme tout CDN, Cloudflare traite les données techniques nécessaires à la livraison des pages et à la protection du service : adresse IP, User-Agent, URL demandée, date et heure, code de réponse et informations de sécurité. Cloudflare agit comme hébergeur et sous-traitant pour notre compte ; il ne nous fournit pas de liste des visiteurs et nous ne conservons pas de journaux nominatifs. Nous ne pouvons donc pas identifier une personne à partir des données de navigation, et nous ne les utilisons pas pour profiler.</p>
 <p>Nous n'utilisons ni analytics, ni pixels publicitaires, ni plugins sociaux, ni profilage. Nous ne vendons pas de données personnelles.</p>
 
 <h3>2.2 Stockage local du site</h3>
@@ -45,8 +48,8 @@
 <div class="table-wrap"><table>
 <thead><tr><th>Clé</th><th>Finalité</th><th>Type</th><th>Durée</th></tr></thead>
 <tbody>
-<tr><td data-label="Clé"><code>sc_lang</code></td><td data-label="Finalité">Langue choisie</td><td data-label="Type">Nécessaire</td><td data-label="Durée">Jusqu'à suppression</td></tr>
-<tr><td data-label="Clé"><code>sc_theme</code></td><td data-label="Finalité">Thème sombre, clair ou contraste élevé</td><td data-label="Type">Nécessaire</td><td data-label="Durée">Jusqu'à suppression</td></tr>
+<tr><td data-label="Clé"><code>sc_lang</code></td><td data-label="Finalité">Langue choisie ou automatique</td><td data-label="Type">Nécessaire</td><td data-label="Durée">Jusqu'à suppression</td></tr>
+<tr><td data-label="Clé"><code>sc_theme</code></td><td data-label="Finalité">Thème sombre, clair, contraste élevé ou système</td><td data-label="Type">Nécessaire</td><td data-label="Durée">Jusqu'à suppression</td></tr>
 <tr><td data-label="Clé"><code>sc_consent</code></td><td data-label="Finalité">Mémorise le choix effectué dans la bannière</td><td data-label="Type">Nécessaire</td><td data-label="Durée">Jusqu'à suppression</td></tr>
 <tr><td data-label="Clé"><code>sc_opt</code></td><td data-label="Finalité">Préférence de cache facultatif</td><td data-label="Type">Nécessaire</td><td data-label="Durée">Jusqu'à suppression</td></tr>
 <tr><td data-label="Clé"><code>sc_cache</code></td><td data-label="Finalité">Cache des informations sur les versions</td><td data-label="Type">Facultatif, avec consentement</td><td data-label="Durée">1 heure</td></tr>
@@ -80,17 +83,18 @@
 <p>Nous ne communiquons pas de données à des annonceurs, courtiers en données ou autres tiers à des fins marketing.</p>
 
 <h2>5. Conservation</h2>
-<p>Les journaux techniques et de sécurité sont conservés par Cloudflare selon la configuration du service et pendant la durée nécessaire à la sécurité et à la continuité. Le stockage local reste dans votre navigateur jusqu'à sa suppression. Les emails sont conservés le temps nécessaire au traitement de la demande, puis supprimés, sauf obligation légale.</p>
+<p>Nous ne conservons pas de journaux propres. Les journaux techniques et de sécurité sont gérés par Cloudflare selon la configuration du service et ses politiques, pendant la durée nécessaire à la sécurité et à la continuité ; ils ne nous sont pas fournis sous une forme permettant d'identifier les visiteurs individuellement. Le stockage local reste dans votre navigateur jusqu'à sa suppression. Les emails sont conservés le temps nécessaire au traitement de la demande, puis supprimés, sauf obligation légale.</p>
 
 <h2>6. Vos droits</h2>
 <p>Vous pouvez exercer les droits prévus aux art. 15 à 22 du RGPD : accès, rectification, effacement, limitation, opposition, portabilité et retrait du consentement. Écrivez à <a href="mailto:info@poppi.cc">info@poppi.cc</a> ; nous répondrons dans les délais prévus par la loi.</p>
+<p><strong>Concrètement.</strong> Nous n'avons ni comptes, ni base d'utilisateurs, ni archive côté serveur liée aux visiteurs. Les données du site et de la web app restent sur votre appareil : vous pouvez les supprimer vous-même dans les réglages du navigateur (« Effacer les données du site ») ou dans l'application. Si vous nous écrivez, nous vous indiquerons comment faire. Pour les journaux techniques gérés par Cloudflare, qui ne nous permettent pas de vous identifier, nous pouvons expliquer le traitement et, si nécessaire, contacter le fournisseur ; nous ne pouvons pas effacer des données que nous ne pouvons pas relier à vous. Les emails sont supprimés une fois la demande traitée.</p>
 <p>Si vous estimez que le traitement enfreint le RGPD, vous pouvez déposer une réclamation auprès du <a href="https://www.garanteprivacy.it/" rel="noopener">Garante per la protezione dei dati personali</a> italien ou de l'autorité de contrôle de votre pays.</p>
 
 <h2>7. Cookies</h2>
 <p>Ce site n'utilise pas de cookies de profilage. Cloudflare peut déposer des cookies techniques de sécurité (par exemple <code>__cf_bm</code>) lorsque les fonctions de protection anti-bots sont actives ; ils sont nécessaires à la sécurité du service et ne requièrent pas de consentement. La bannière que vous voyez recueille le consentement pour le cache facultatif des versions et vous informe sur l'utilisation du stockage local.</p>
 
 <h2>8. Mineurs</h2>
-<p>Le site et la web app ne s'adressent pas aux enfants de moins de 14 ans. Nous ne collectons pas sciemment de données concernant des mineurs. Si vous pensez qu'un mineur nous a envoyé des données, contactez-nous et nous les supprimerons.</p>
+<p>Le site et la web app ne s'adressent pas aux enfants de moins de 14 ans. Nous ne collectons pas sciemment de données concernant des mineurs. Si vous pensez qu'un mineur nous a envoyé des données par email, contactez-nous et nous supprimerons le message.</p>
 
 <h2>9. Licences</h2>
 <p>Le code de ce site est distribué sous licence <a href="/LICENSE">MIT</a>. L'application Scripta est distribuée sous licence <a href="https://github.com/rizzonicola/Scripta/blob/main/LICENSE" rel="noopener">GPL-3.0</a>. Les bibliothèques tierces conservent leurs licences respectives.</p>
@@ -102,5 +106,6 @@
 </main>
 
 <footer><div class="w footer-links"><span>© 2026 Nicola Rizzo · <a href="/LICENSE">Site MIT</a> · <a href="https://github.com/rizzonicola/Scripta/blob/main/LICENSE" rel="noopener">App GPL-3.0</a></span><span><a href="mailto:info@poppi.cc">info@poppi.cc</a> · <a href="https://github.com/rizzonicola/Scripta" rel="noopener">GitHub</a> · <a href="/fr/privacy/" aria-current="page">Confidentialité & cookies</a></span><span class="lang-links"><a href="/it/privacy/">Italiano</a> · <a href="/en/privacy/">English</a> · <a href="/fr/privacy/" aria-current="page">Français</a></span></div></footer>
+<script src="/menu.js" defer></script>
 </body>
 </html>
