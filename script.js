@@ -54,8 +54,6 @@ async function load(){const c=ls.get('sc_cache'),ok=ls.get('sc_opt')==='1';
  catch(e){if(page==='releases')$('#rel').innerHTML=`<p>${t('err')} <a href="https://github.com/${REPO}/releases">${t('open')} →</a></p>`}}
 $('#setBtn').onclick=()=>{$('#optSw').checked=ls.get('sc_opt')==='1';$('#set').showModal()};
 $('#optSw').onchange=e=>{ls.set('sc_opt',e.target.checked?'1':'0');if(!e.target.checked)try{localStorage.removeItem('sc_cache')}catch(_){}};
-function openPriv(){$('#set').close();ck.hidden=false;$('#prefs').hidden=false;$('#optCache').checked=ls.get('sc_opt')==='1';$('#cus').textContent='OK'}
-$('#stRead').onclick=e=>{e.preventDefault();openPriv()};
 function pressed(id,v){document.querySelectorAll(id+' button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===v))}
 /* Il cambio lingua ora naviga verso /<lang>/ o /<lang>/releases/: un URL
    statico per lingua, indicizzabile e con hreflang corretto, invece di
@@ -67,7 +65,6 @@ const th=ls.get('sc_theme')||'dark';document.documentElement.dataset.theme=th;pr
 const ck=$('#ck');function done(opt){ls.set('sc_consent','1');ls.set('sc_opt',opt?'1':'0');if(!opt)try{localStorage.removeItem('sc_cache')}catch(e){}ck.hidden=true}
 $('#acc').onclick=()=>done(true);$('#rej').onclick=()=>done(false);
 $('#cus').onclick=()=>{const p=$('#prefs');if(p.hidden){p.hidden=false;$('#optCache').checked=ls.get('sc_opt')==='1';$('#cus').textContent='OK'}else done($('#optCache').checked)};
-$('#privL').onclick=e=>{e.preventDefault();openPriv()};
 if(!ls.get('sc_consent'))ck.hidden=false;
 detect();renderHero();load();
 

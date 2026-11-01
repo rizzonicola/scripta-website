@@ -7,7 +7,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://scripta.poppi.cc/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://scripta.poppi.cc/it/"/>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -16,7 +16,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://scripta.poppi.cc/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://scripta.poppi.cc/it/"/>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -25,7 +25,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://scripta.poppi.cc/fr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://scripta.poppi.cc/it/"/>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -34,7 +34,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/releases/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://scripta.poppi.cc/fr/releases/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://scripta.poppi.cc/it/releases/"/>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -43,7 +43,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/releases/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://scripta.poppi.cc/fr/releases/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://scripta.poppi.cc/it/releases/"/>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -52,7 +52,34 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/releases/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://scripta.poppi.cc/fr/releases/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://scripta.poppi.cc/it/releases/"/>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://scripta.poppi.cc/it/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://scripta.poppi.cc/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scripta.poppi.cc/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scripta.poppi.cc/it/privacy/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://scripta.poppi.cc/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://scripta.poppi.cc/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scripta.poppi.cc/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scripta.poppi.cc/it/privacy/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://scripta.poppi.cc/fr/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://scripta.poppi.cc/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://scripta.poppi.cc/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://scripta.poppi.cc/it/privacy/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>yearly</changefreq>
   </url>
 </urlset>
