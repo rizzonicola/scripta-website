@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Information sur la confidentialité — Scripta</title>
-<meta name="description" content="Information sur la confidentialité du site scripta.poppi.cc et de la web app app.scripta.poppi.cc : données traitées, cookies, stockage local, droits RGPD et contacts.">
+<meta name="description" content="Information sur la confidentialité du site scripta.poppi.cc : données traitées, cookies, stockage local, droits RGPD et contacts.">
 <link rel="canonical" href="https://scripta.poppi.cc/fr/privacy/">
 <link rel="alternate" hreflang="it" href="https://scripta.poppi.cc/it/privacy/">
 <link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/privacy/">
@@ -25,7 +25,7 @@
 <a class="logo" href="/fr/" aria-label="Scripta — home"><svg class="lg" viewBox="90 90 310 310" aria-hidden="true"><g transform="rotate(-45 256 256)"> <path d="M 242,50 L 270,50 C 274,50 277,53 277,57 L 275,130 L 237,130 L 235,57 C 235,53 238,50 242,50 Z" fill="var(--ac)" /> <path d="M 266,60 L 270,60 C 271,60 272,61 272,62 L 270,180 C 270,183 267,185 264,185 C 262,185 261,183 261,180 L 265,62 C 265,61 265.5,60 266,60 Z" fill="#a9b6c4" /> <path d="M 237,130 L 275,130 L 272,290 L 240,290 Z" fill="var(--ac)" /> <rect x="239" y="290" width="34" height="4" fill="#a9b6c4" /> <path d="M 240,294 L 272,294 L 267,370 L 245,370 Z" fill="var(--ac)" opacity="0.9" /> <line x1="243" y1="315" x2="269" y2="315" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <line x1="244" y1="330" x2="268" y2="330" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <line x1="244.5" y1="345" x2="267.5" y2="345" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <path d="M 245,370 L 267,370 L 263,395 L 249,395 Z" fill="#a9b6c4" /> <path d="M 249,395 L 263,395 L 256,442 Z" fill="#a9b6c4" /> <path d="M 249,395 L 256,395 L 256,442 Z" fill="#ffffff" opacity="0.4" /> <circle cx="256" cy="410" r="2.5" fill="#16191d" /> <line x1="256" y1="412.5" x2="256" y2="442" stroke="#16191d" stroke-width="1.5" stroke-linecap="round" /> <circle cx="256" cy="442" r="1.5" fill="#ffffff" /> <path d="M 241,55 L 243,130 L 244,290 L 247,370" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.35" /> <path d="M 271,55 L 269,130 L 268,290 L 265,370" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" opacity="0.4" /> </g></svg>Scripta</a>
 <button class="menuBtn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navMenu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg><span>Menu</span></button>
 <div class="nav-menu" id="navMenu">
-<nav><a href="/fr/">Accueil</a><a href="/fr/releases/">Télécharger</a><a href="https://app.scripta.poppi.cc/" rel="noopener">Web App</a><a href="/fr/#about">Licences</a></nav>
+<nav><a href="/fr/">Accueil</a><a href="/fr/releases/">Télécharger</a><a href="/fr/#about">Licences</a></nav>
 </div>
 </div></header>
 
@@ -33,7 +33,7 @@
 <p><a href="/fr/">← Retour à l'accueil</a></p>
 <h1>Information sur la confidentialité</h1>
 <p><strong>Dernière mise à jour :</strong> 1<sup>er</sup> novembre 2026</p>
-<p class="lead">Cette information explique comment les données personnelles sont traitées lorsque vous visitez <strong>scripta.poppi.cc</strong> et lorsque vous utilisez la web app <strong>app.scripta.poppi.cc</strong>. Les applications de bureau et mobiles Scripta sont local-first et ne nous envoient aucune donnée.</p>
+<p class="lead">Cette information explique comment les données personnelles sont traitées lorsque vous visitez <strong>scripta.poppi.cc</strong>. Les applications de bureau et mobiles Scripta sont local-first et ne nous envoient aucune donnée.</p>
 
 <h2>1. Responsable du traitement</h2>
 <p>Le responsable du traitement est <strong>Nicola Rizzo</strong>, joignable à l'adresse <a href="mailto:info@poppi.cc">info@poppi.cc</a>. Scripta est un projet personnel et open source ; aucun délégué à la protection des données (DPO) n'a été désigné, les conditions de l'art. 37 du RGPD n'étant pas réunies.</p>
@@ -59,12 +59,7 @@
 <h3>2.3 Informations sur les versions</h3>
 <p>La page de téléchargement lit le fichier <code>/releases.json</code> sur ce même site. Ce n'est que si ce fichier est indisponible que le navigateur interroge l'API publique de GitHub : dans ce cas, GitHub reçoit votre adresse IP et les données techniques de la requête. Il en va de même lorsque vous ouvrez un lien vers GitHub.</p>
 
-<h3>2.4 Web app</h3>
-<p>La web app <strong>app.scripta.poppi.cc</strong> est local-first. Les notes, dossiers et réglages sont stockés dans le navigateur de votre appareil (SQLite en WebAssembly, persisté dans IndexedDB et <code>localStorage</code>). Ces données ne nous sont pas envoyées.</p>
-<p>Si vous activez la synchronisation, la web app envoie les notes et les identifiants au serveur que vous configurez. Nous n'exploitons pas de serveur de synchronisation central : le responsable de ce serveur est la personne qui le met à disposition. La web app ne contient ni analytics ni télémétrie.</p>
-<p>Le service worker de la web app met en cache les ressources nécessaires au fonctionnement hors ligne. Vous pouvez supprimer l'application et ses données depuis les réglages du navigateur ou en effaçant les données du site. Exportez vos notes en ZIP ou Markdown avant de le faire.</p>
-
-<h3>2.5 Email</h3>
+<h3>2.4 Email</h3>
 <p>Si vous écrivez à <a href="mailto:info@poppi.cc">info@poppi.cc</a>, nous traitons votre adresse email et le contenu du message pour répondre à votre demande. Nous n'utilisons pas l'adresse pour des newsletters ou du marketing.</p>
 
 <h2>3. Base juridique</h2>
@@ -87,14 +82,14 @@
 
 <h2>6. Vos droits</h2>
 <p>Vous pouvez exercer les droits prévus aux art. 15 à 22 du RGPD : accès, rectification, effacement, limitation, opposition, portabilité et retrait du consentement. Écrivez à <a href="mailto:info@poppi.cc">info@poppi.cc</a> ; nous répondrons dans les délais prévus par la loi.</p>
-<p><strong>Concrètement.</strong> Nous n'avons ni comptes, ni base d'utilisateurs, ni archive côté serveur liée aux visiteurs. Les données du site et de la web app restent sur votre appareil : vous pouvez les supprimer vous-même dans les réglages du navigateur (« Effacer les données du site ») ou dans l'application. Si vous nous écrivez, nous vous indiquerons comment faire. Pour les journaux techniques gérés par Cloudflare, qui ne nous permettent pas de vous identifier, nous pouvons expliquer le traitement et, si nécessaire, contacter le fournisseur ; nous ne pouvons pas effacer des données que nous ne pouvons pas relier à vous. Les emails sont supprimés une fois la demande traitée.</p>
+<p><strong>Concrètement.</strong> Nous n'avons ni comptes, ni base d'utilisateurs, ni archive côté serveur liée aux visiteurs. Les données du site restent sur votre appareil : vous pouvez les supprimer vous-même dans les réglages du navigateur (« Effacer les données du site »). Si vous nous écrivez, nous vous indiquerons comment faire. Pour les journaux techniques gérés par Cloudflare, qui ne nous permettent pas de vous identifier, nous pouvons expliquer le traitement et, si nécessaire, contacter le fournisseur ; nous ne pouvons pas effacer des données que nous ne pouvons pas relier à vous. Les emails sont supprimés une fois la demande traitée.</p>
 <p>Si vous estimez que le traitement enfreint le RGPD, vous pouvez déposer une réclamation auprès du <a href="https://www.garanteprivacy.it/" rel="noopener">Garante per la protezione dei dati personali</a> italien ou de l'autorité de contrôle de votre pays.</p>
 
 <h2>7. Cookies</h2>
 <p>Ce site n'utilise pas de cookies de profilage. Cloudflare peut déposer des cookies techniques de sécurité (par exemple <code>__cf_bm</code>) lorsque les fonctions de protection anti-bots sont actives ; ils sont nécessaires à la sécurité du service et ne requièrent pas de consentement. La bannière que vous voyez recueille le consentement pour le cache facultatif des versions et vous informe sur l'utilisation du stockage local.</p>
 
 <h2>8. Mineurs</h2>
-<p>Le site et la web app ne s'adressent pas aux enfants de moins de 14 ans. Nous ne collectons pas sciemment de données concernant des mineurs. Si vous pensez qu'un mineur nous a envoyé des données par email, contactez-nous et nous supprimerons le message.</p>
+<p>Le site ne s'adresse pas aux enfants de moins de 14 ans. Nous ne collectons pas sciemment de données concernant des mineurs. Si vous pensez qu'un mineur nous a envoyé des données par email, contactez-nous et nous supprimerons le message.</p>
 
 <h2>9. Licences</h2>
 <p>Le code de ce site est distribué sous licence <a href="/LICENSE">MIT</a>. L'application Scripta est distribuée sous licence <a href="https://github.com/rizzonicola/Scripta/blob/main/LICENSE" rel="noopener">GPL-3.0</a>. Les bibliothèques tierces conservent leurs licences respectives.</p>

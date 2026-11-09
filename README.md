@@ -11,7 +11,6 @@ Static site: plain HTML, CSS and JavaScript. No build step, no dependencies.
 - Install guides for iOS (sideloading), Linux (Flatpak), Android, Windows and macOS
 - All files with size and SHA-256, plus previous releases
 - Italian, English and French, with dark, light, high-contrast or system themes; language can follow the browser
-- Link to the installable Web/PWA app at [app.scripta.poppi.cc](https://app.scripta.poppi.cc/)
 - GDPR cookie banner and dedicated privacy notices (IT/EN/FR)
 - Clear licensing: website MIT, Scripta app GPL-3.0
 
@@ -44,7 +43,7 @@ Serve the folder from any static host: GitHub Pages, Cloudflare Pages, Netlify, 
 python3 -m http.server 8000
 ```
 
-The live site runs on Cloudflare Pages at `scripta.poppi.cc`. The web app is a separate Cloudflare Pages project on `app.scripta.poppi.cc`; the two origins have separate browser storage, so notes do not sync automatically between them. Use ZIP export/import or the app's optional sync.
+The live site runs on Cloudflare Pages at `scripta.poppi.cc`.
 
 ## Contact and licensing
 

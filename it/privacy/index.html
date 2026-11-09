@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Informativa privacy — Scripta</title>
-<meta name="description" content="Informativa privacy del sito scripta.poppi.cc e della web app app.scripta.poppi.cc: dati trattati, cookie, storage locale, diritti GDPR e contatti.">
+<meta name="description" content="Informativa privacy del sito scripta.poppi.cc: dati trattati, cookie, storage locale, diritti GDPR e contatti.">
 <link rel="canonical" href="https://scripta.poppi.cc/it/privacy/">
 <link rel="alternate" hreflang="it" href="https://scripta.poppi.cc/it/privacy/">
 <link rel="alternate" hreflang="en" href="https://scripta.poppi.cc/en/privacy/">
@@ -25,7 +25,7 @@
 <a class="logo" href="/it/" aria-label="Scripta — home"><svg class="lg" viewBox="90 90 310 310" aria-hidden="true"><g transform="rotate(-45 256 256)"> <path d="M 242,50 L 270,50 C 274,50 277,53 277,57 L 275,130 L 237,130 L 235,57 C 235,53 238,50 242,50 Z" fill="var(--ac)" /> <path d="M 266,60 L 270,60 C 271,60 272,61 272,62 L 270,180 C 270,183 267,185 264,185 C 262,185 261,183 261,180 L 265,62 C 265,61 265.5,60 266,60 Z" fill="#a9b6c4" /> <path d="M 237,130 L 275,130 L 272,290 L 240,290 Z" fill="var(--ac)" /> <rect x="239" y="290" width="34" height="4" fill="#a9b6c4" /> <path d="M 240,294 L 272,294 L 267,370 L 245,370 Z" fill="var(--ac)" opacity="0.9" /> <line x1="243" y1="315" x2="269" y2="315" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <line x1="244" y1="330" x2="268" y2="330" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <line x1="244.5" y1="345" x2="267.5" y2="345" stroke="#121517" stroke-width="1.5" opacity="0.3" /> <path d="M 245,370 L 267,370 L 263,395 L 249,395 Z" fill="#a9b6c4" /> <path d="M 249,395 L 263,395 L 256,442 Z" fill="#a9b6c4" /> <path d="M 249,395 L 256,395 L 256,442 Z" fill="#ffffff" opacity="0.4" /> <circle cx="256" cy="410" r="2.5" fill="#16191d" /> <line x1="256" y1="412.5" x2="256" y2="442" stroke="#16191d" stroke-width="1.5" stroke-linecap="round" /> <circle cx="256" cy="442" r="1.5" fill="#ffffff" /> <path d="M 241,55 L 243,130 L 244,290 L 247,370" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.35" /> <path d="M 271,55 L 269,130 L 268,290 L 265,370" fill="none" stroke="#000000" stroke-width="2.2" stroke-linecap="round" opacity="0.4" /> </g></svg>Scripta</a>
 <button class="menuBtn" id="menuBtn" aria-label="Apri il menu" aria-expanded="false" aria-controls="navMenu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg><span>Menu</span></button>
 <div class="nav-menu" id="navMenu">
-<nav><a href="/it/">Home</a><a href="/it/releases/">Download</a><a href="https://app.scripta.poppi.cc/" rel="noopener">Web App</a><a href="/it/#about">Licenze</a></nav>
+<nav><a href="/it/">Home</a><a href="/it/releases/">Download</a><a href="/it/#about">Licenze</a></nav>
 </div>
 </div></header>
 
@@ -33,7 +33,7 @@
 <p><a href="/it/">← Torna alla home</a></p>
 <h1>Informativa privacy</h1>
 <p><strong>Ultimo aggiornamento:</strong> 1 novembre 2026</p>
-<p class="lead">Questa informativa descrive come vengono trattati i dati personali quando visiti <strong>scripta.poppi.cc</strong> e quando usi la web app <strong>app.scripta.poppi.cc</strong>. Le app desktop e mobile di Scripta sono local-first e non inviano dati a noi.</p>
+<p class="lead">Questa informativa descrive come vengono trattati i dati personali quando visiti <strong>scripta.poppi.cc</strong>. Le app desktop e mobile di Scripta sono local-first e non inviano dati a noi.</p>
 
 <h2>1. Titolare del trattamento</h2>
 <p>Il titolare del trattamento è <strong>Nicola Rizzo</strong>, contattabile all'indirizzo <a href="mailto:info@poppi.cc">info@poppi.cc</a>. Scripta è un progetto personale e open source; non è nominato un responsabile della protezione dei dati (DPO), perché non ricorrono i presupposti previsti dall'art. 37 GDPR.</p>
@@ -59,12 +59,7 @@
 <h3>2.3 Informazioni sulle release</h3>
 <p>La pagina di download legge il file <code>/releases.json</code> dallo stesso sito. Solo se questo file non è disponibile, il browser interroga l'API pubblica di GitHub: in quel caso GitHub riceve il tuo indirizzo IP e i dati tecnici della richiesta. Lo stesso vale quando apri un link verso GitHub.</p>
 
-<h3>2.4 Web app</h3>
-<p>La web app <strong>app.scripta.poppi.cc</strong> è local-first. Le note, le cartelle e le impostazioni vengono salvate nel browser del tuo dispositivo (SQLite in WebAssembly con persistenza in IndexedDB e <code>localStorage</code>). Questi dati non vengono inviati a noi.</p>
-<p>Se attivi la sincronizzazione, la web app invia note e credenziali al server che configuri tu. Non gestiamo un server di sincronizzazione centrale: il titolare di quel server è il soggetto che lo mette a disposizione. La web app non include analytics né telemetria.</p>
-<p>Il service worker della web app memorizza nella cache del browser gli asset necessari al funzionamento offline. Puoi rimuovere app e dati dalla schermata delle impostazioni del browser o cancellando i dati del sito. Esporta le note in ZIP o Markdown prima di farlo.</p>
-
-<h3>2.5 Email</h3>
+<h3>2.4 Email</h3>
 <p>Se scrivi a <a href="mailto:info@poppi.cc">info@poppi.cc</a>, trattiamo il tuo indirizzo email e il contenuto del messaggio per rispondere alla richiesta. Non usiamo l'indirizzo per newsletter o marketing.</p>
 
 <h2>3. Base giuridica</h2>
@@ -87,14 +82,14 @@
 
 <h2>6. I tuoi diritti</h2>
 <p>Puoi esercitare i diritti previsti dagli artt. 15–22 GDPR: accesso, rettifica, cancellazione, limitazione, opposizione, portabilità e revoca del consenso. Scrivi a <a href="mailto:info@poppi.cc">info@poppi.cc</a>; risponderemo entro i termini previsti dalla legge.</p>
-<p><strong>Come funziona in pratica.</strong> Non abbiamo account, database utenti o un archivio lato server collegato ai visitatori. I dati del sito e della web app restano sul tuo dispositivo: puoi cancellarli in autonomia dalle impostazioni del browser («Cancella dati del sito») o dall'app. Se ci scrivi, ti indicheremo come fare. Per i log tecnici gestiti da Cloudflare, che non ci permettono di identificarti, possiamo spiegarti il trattamento e, se necessario, contattare il fornitore; non possiamo cancellare dati che non siamo in grado di collegare a te. Le email che ci invii le cancelliamo una volta gestita la richiesta.</p>
+<p><strong>Come funziona in pratica.</strong> Non abbiamo account, database utenti o un archivio lato server collegato ai visitatori. I dati del sito restano sul tuo dispositivo: puoi cancellarli in autonomia dalle impostazioni del browser («Cancella dati del sito»). Se ci scrivi, ti indicheremo come fare. Per i log tecnici gestiti da Cloudflare, che non ci permettono di identificarti, possiamo spiegarti il trattamento e, se necessario, contattare il fornitore; non possiamo cancellare dati che non siamo in grado di collegare a te. Le email che ci invii le cancelliamo una volta gestita la richiesta.</p>
 <p>Se ritieni che il trattamento violi il GDPR, puoi proporre reclamo al <a href="https://www.garanteprivacy.it/" rel="noopener">Garante per la protezione dei dati personali</a> o all'autorità di controllo del tuo Paese.</p>
 
 <h2>7. Cookie</h2>
 <p>Questo sito non usa cookie di profilazione. Cloudflare può impostare cookie tecnici di sicurezza (ad esempio <code>__cf_bm</code>) quando le funzioni di protezione bot sono attive; sono necessari alla sicurezza del servizio e non richiedono consenso. Il banner che vedi serve a raccogliere il consenso per la cache facoltativa delle release e a informarti sull'uso dello storage locale.</p>
 
 <h2>8. Minori</h2>
-<p>Il sito e la web app non sono destinati a bambini di età inferiore a 14 anni. Non raccogliamo consapevolmente dati di minori. Se ritieni che un minore ci abbia inviato dati via email, scrivici: cancelleremo il messaggio.</p>
+<p>Il sito non è destinato a bambini di età inferiore a 14 anni. Non raccogliamo consapevolmente dati di minori. Se ritieni che un minore ci abbia inviato dati via email, scrivici: cancelleremo il messaggio.</p>
 
 <h2>9. Licenze</h2>
 <p>Il codice di questo sito è distribuito con licenza <a href="/LICENSE">MIT</a>. L'app Scripta è distribuita con licenza <a href="https://github.com/rizzonicola/Scripta/blob/main/LICENSE" rel="noopener">GPL-3.0</a>. Le librerie di terze parti mantengono le rispettive licenze.</p>
